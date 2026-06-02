@@ -27,7 +27,7 @@
         --corners-right: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/corners_right.png);
         --corners-left: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/corners_left.png);
         --corners-right2: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/corners_right2.png);
-
+        --corners-left2: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/corners_left2.png);
     }
 
 .rarity-bar {
@@ -792,8 +792,14 @@ span.corners-top span,
 span.corners-bottom span {
   background-image: var(--corners-right)
 }
-#cp-main span.corners-top span {
+#cp-main span.corners-top span,
+#cp-menu span.corners-top span {
   background-image: var(--corners-right2)
+}
+
+#cp-main span.corners-bottom,
+#cp-menu span.corners-bottom {
+  background-image: var(--corners-left2)
 }
 table.table1 thead th {
   color: #FFFFFF;
