@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         CS Valentine - Image fixes
+// @name         CS Dark Mobile - Image fixes
 // @namespace    http://tampermonkey.net/
 // @version      20260601.01
 // @description  fixing images across cs to fit theme
@@ -14,24 +14,24 @@
     'use strict';
     // images for the adopt section
 const adoptandstoreimgs = {
-    'dogs': 'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/dogs.png',
-    'horses':'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/horses.png',
-    'cats':'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/cats.png',
-    'butterfly wolves':'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/butterflywolves.png',
-    'rodents':'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/rodents.png',
-    'second-generation pets':'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/2ndgens.png',
-    'hatchery':'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/hatchery.png',
-    'other':'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/other.png',
-    'special event':'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/specialevent.png',
+    'dogs': 'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/species/dogs.png?v=2?v=2',
+    'horses':'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/species/horses.png?v=2?v=2',
+    'cats':'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/species/cats.png?v=2?v=2',
+    'butterfly wolves':'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/species/butterflywolves.png?v=2?v=2',
+    'rodents':'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/species/rodents.png?v=2?v=2',
+    'second-generation pets':'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/species/2ndgens.png?v=2?v=2',
+    'hatchery':'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/species/hatchery.png?v=2?v=2',
+    'other':'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/species/other.png?v=2?v=2',
+    'special event':'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/species/specialevent.png?v=2?v=2',
 
-    'category.php?id=8': 'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/accessories.png',
-    'category.php?id=11': 'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/wigs.png',
-    'category.php?id=2': 'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/costumes.png',
-    'category.php?id=3': 'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/casual.png',
-    'category.php?id=5': 'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/objects.png',
-    'category.php?id=1': 'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/extra.png',
-    'category.php?id=7': 'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/pets.png',
-    'category.php?id=9': 'https://raw.githubusercontent.com/fleuraward/CS-Valentine/refs/heads/main/assets/specials.png'
+    'category.php?id=8': 'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/store/accessories.png?v=3',
+    'category.php?id=11': 'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/store/wigs.png?v=3',
+    'category.php?id=2': 'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/store/costumes.png?v=3',
+    'category.php?id=3': 'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/store/casual.png?v=3',
+    'category.php?id=5': 'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/store/objects.png?v=3',
+    'category.php?id=1': 'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/store/extra.png?v=3',
+    'category.php?id=7': 'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/store/pets.png?v=3',
+    'category.php?id=9': 'https://www.chickensmoothie.com/Forum/styles/CSDark/theme/images/store/specials.png?v=3'
 };
 
     // images for the forum pages
@@ -56,13 +56,25 @@ const adoptandstoreimgs = {
     function processImage(img) {
         if (!img?.src) return;
 
+// for head
+    if (img.src === 'https://www.chickensmoothie.com/Forum/styles/CSMobile/theme/images/head.png') {
+        img.src = 'https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/head.png';
+        return;
+    }
+
+    // for nav
+    if (img.src === 'https://www.chickensmoothie.com/Forum/styles/CSMobile/theme/images/nav.png?1') {
+        img.src = 'https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/nav.png';
+        return;
+    }
+
         // fix pet img bgs to fit theme
         try {
             const imgUrl = new URL(img.src);
 
             const petsandarchive = {
-                'e0f6b2': 'ffdaf1', // pet images across site
-                '99c57c': 'f587cb', // archive images
+                'd1ff78': '2c2c2c', // pet images across site
+                '90dc35': '3c3c3c', // archive images
                 'c6e194': 'ffb5e3' // pets in trades
             };
 

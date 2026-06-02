@@ -19,13 +19,13 @@
         --4444ee: #81b7ae; /* links */
         --0000ee: #3ab096;
         --f3f1eb: #2b2b2c;
-        --bgtabs-2: url(/testasset/bg_tabs2.png);
-        --quote: url(https://litter.catbox.moe/s2zlqwuvxrxwko7d.png);
-        --online: url(https://litter.catbox.moe/053ycoswjij7ahvc.png);
-        --adopt-seen: url(x);
-        --adopt-seen: url(x);
-        --corners-right: url("https://www.chickensmoothie.com/Forum/styles/CSMobile/theme/images/corners_right.png?v=1");
-        --corners-left: url("https://www.chickensmoothie.com/Forum/styles/CSMobile/theme/images/corners_left.png?v=1");
+        --bgtabs-2: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/bg_tabs2.png);
+        --quote: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/quote.png);
+        --online: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/online.png);
+        --adopt-seen: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/nav_adopt.png);
+        --adopt-seen: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/nav_adopt_new.png);
+        --corners-right: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/corners_right.png);
+        --corners-left: url(https://raw.githubusercontent.com/fleuraward/CS-Mobile-Dark/refs/heads/main/assets/corners_left.png);
     }
 
 .rarity-bar {
